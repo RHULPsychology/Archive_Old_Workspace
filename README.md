@@ -23,14 +23,8 @@
 - Move to the temp folder and create a uncompressed folder
 
 ```bash
-    mkdir -p /tmp/Trail_uncompressed/; cd /tmp/Trail_uncompressed/; 
+   bash /usr/local/apps/psycapps/Archive_Old_Workspace/Check_Backup_Content.sh /MRIWork/MRIWork10/pv/giusi_pollicina/Old/ /MRIArchive/MRIWork10/pv/giusi_pollicina/Old.tar.gz
 ```
-- Then uncompress the gzipped tarball backup.
-
-```bash
-    tar xvzf /MRIArchive/MRIWork10/pv/giusi_pollicina/Old.tar.gz
-```
-
 - check the Backup Report files thus created in ```/tmp/Backup_Report-XXXXXXXXXX/``` to check if you have successfully retrieved your backed up data.
 
 
