@@ -18,7 +18,7 @@
       tar cvf - /MRIWork/MRIWork10/pv/giusi_pollicina/Old/ | gzip -9 -> /MRIArchive/MRIWork10/pv/giusi_pollicina/Old.tar.gz
   ```
 
-# Uncompress to check if the backup has worked 
+# Check if the backup has worked 
 
 - Move to the temp folder and create a uncompressed folder
 
@@ -31,17 +31,8 @@
     tar xvzf /MRIArchive/MRIWork10/pv/giusi_pollicina/Old.tar.gz
 ```
 
-- check the subfolders in ```/tmp/Trail_uncompressed/``` with the ```ls -lla /tmp/Trail_uncompressed/``` command to see if you have successfully retrieved your backed up data.
+- check the Backup Report files thus created in ```/tmp/Backup_Report-XXXXXXXXXX/``` to check if you have successfully retrieved your backed up data.
 
-
-# Delete the uncompressed folder
-
-Once you have checked the output, remove the uncomressed folder
-
-```bash
-    rm -r /tmp/Trail_uncompressed/`
-```
-Use ```rm -rf``` if you have to force delete it.
 
 # Delete the original folder
 
