@@ -20,10 +20,10 @@
 
 # Check if the backup has worked 
 
-- Move to the temp folder and create a uncompressed folder
+- use the ```/usr/local/apps/psycapps/Archive_Old_Workspace/Check_Backup_Content.sh``` script to check whether the backed-up content is same as the original. It is done with the help of file identifiers called ```md5sums```. The script takes 2 inputs (input 1 -> path to the original folder, input 2 -> path to the Tarball archive) and produces a report. For example:
 
 ```bash
-   bash /usr/local/apps/psycapps/Archive_Old_Workspace/Check_Backup_Content.sh /MRIWork/MRIWork10/pv/giusi_pollicina/Old/ /MRIArchive/MRIWork10/pv/giusi_pollicina/Old.tar.gz
+   bash /usr/local/apps/psycapps/Archive_Old_Workspace/Check_Backup_Content.sh \\ /MRIWork/MRIWork10/pv/giusi_pollicina/Old/ \\ /MRIArchive/MRIWork10/pv/giusi_pollicina/Old.tar.gz
 ```
 - check the Backup Report files thus created in ```/tmp/Backup_Report-XXXXXXXXXX/``` to check if you have successfully retrieved your backed up data.
 
