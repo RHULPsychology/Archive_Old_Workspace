@@ -20,7 +20,7 @@ echo "the Backup_Report directory is: " $Backup_Report_dir
 
 echo "Uncompressing the Backup Archive: " $path_to_tar_ball
 cd $tmp_dir
-tar xvzf $path_to_tar_ball
+tar xzf $path_to_tar_ball
 
 echo "Creating Backup Reports (md5sums) in folder : " $Backup_Report_dir
 find $tmp_dir -type f -exec md5sum {} + | sort -k 2 >> $Backup_Report_dir/Uncompressed_md5sums.txt
