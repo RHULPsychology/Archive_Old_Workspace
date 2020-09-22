@@ -44,3 +44,18 @@ Once you are confident remove the folder like:
 ```bash
     rm -r /MRIWork/MRIWork10/pv/giusi_pollicina/Old/
 ```
+
+# Retrieving the backup
+
+- change directory to where you want to retrieve your backup. Use the ```tar xzf``` command to extract it.
+
+For example:
+
+```bash
+    cd /MRIWork/MRI-Scratch
+    tar xzf /MRIArchive/MRIWork10/pv/giusi_pollicina/Old.tar.gz
+   
+```
+
+
+
