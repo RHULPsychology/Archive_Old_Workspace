@@ -27,7 +27,7 @@ find $tmp_dir -type f -exec md5sum {} + | sort -k 2 >> $Backup_Report_dir/Uncomp
 find $path_to_original_folder -type f -exec md5sum {} + | sort -k 2 >> $Backup_Report_dir/Original_md5sums.txt
 
 echo "Checking for differences, saved in : " $Backup_Report_dir/Differences.txt
-diff <(find $tmp_dir -type f -exec md5sum {} + | sort -k 2 | sed 's/ .*\// /') <(find /MRIWork/MRI-Scratch/Sample_BIDS_Dataset/ -type f -exec md5sum {} + | sort -k 2 | sed 's/ .*\// /') >> $Backup_Report_dir/Differences.txt
+diff <(find $tmp_dir -type f -exec md5sum {} + | sort -k 2 | sed 's/ .*\// /') <(find $path_to_original_folder -type f -exec md5sum {} + | sort -k 2 | sed 's/ .*\// /') >> $Backup_Report_dir/Differences.txt
 
 echo "Removing uncompressed directory: " $tmp_dir
 
