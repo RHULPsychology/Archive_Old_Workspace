@@ -4,7 +4,7 @@
 
   For example:
 
-  The data in folder ```/MRIWork/MRIWork10/pv/giusi_pollicina/Old/``` should be compressed and archived in ```/MRIArchive/MRIWork10/pv/giusi_pollicina/Old.tar.gz``` location as a compressed tarball gzip file. Individuals will have writing permissions to their respective archive folders.
+  The data in folder ```/MRIWork/MRIWork10/pv/<user_folder>/Old/``` should be compressed and archived in ```/MRIArchive/MRIWork10/pv/<user_folder>/Old.tar.gz``` location as a compressed tarball gzip file. Individuals will have writing permissions to their respective archive folders.
 
 
 
@@ -15,7 +15,7 @@
   For example:
 
   ```bash
-      tar cvf - /MRIWork/MRIWork10/pv/giusi_pollicina/Old/ | gzip -9 -> /MRIArchive/MRIWork10/pv/giusi_pollicina/Old.tar.gz
+      tar cvf - /MRIWork/MRIWork10/pv/<user_folder>/Old/ | gzip -9 -> /MRIArchive/MRIWork10/pv/<user_folder>/Old.tar.gz
   ```
 
 # Check if the backup has worked 
@@ -23,7 +23,7 @@
 - use the ```/usr/local/apps/psycapps/Archive_Old_Workspace/Check_Backup_Content.sh``` script to check whether the backed-up content is same as the original. It is done with the help of file identifiers called ```md5sums```. The script takes 2 inputs (input 1 -> path to the original folder, input 2 -> path to the Tarball archive) and produces a report. For example:
 
 ```bash
-   bash /usr/local/apps/psycapps/Archive_Old_Workspace/Check_Backup_Content.sh /MRIWork/MRIWork10/pv/giusi_pollicina/Old/ /MRIArchive/MRIWork10/pv/giusi_pollicina/Old.tar.gz
+   bash /usr/local/apps/psycapps/Archive_Old_Workspace/Check_Backup_Content.sh /MRIWork/MRIWork10/pv/<user_folder>/Old/ /MRIArchive/MRIWork10/pv/<user_folder>/Old.tar.gz
 ```
 - check the Backup Report files thus created in ```/tmp/Backup_Report-XXXXXXXXXX/``` to check if you have successfully retrieved your backed up data.
 
@@ -35,14 +35,14 @@
 For example:
 
 ```bash
-    du -sh /MRIArchive/MRIWork10/pv/giusi_pollicina/Old.tar.gz
+    du -sh /MRIArchive/MRIWork10/pv/<user_folder>/Old.tar.gz
 
 ```
 
 Once you are confident remove the folder like:
 
 ```bash
-    rm -r /MRIWork/MRIWork10/pv/giusi_pollicina/Old/
+    rm -r /MRIWork/MRIWork10/pv/<user_folder>/Old/
 ```
 
 # Retrieving the backup
@@ -53,7 +53,7 @@ For example:
 
 ```bash
     cd /MRIWork/MRI-Scratch
-    tar xzf /MRIArchive/MRIWork10/pv/giusi_pollicina/Old.tar.gz
+    tar xzf /MRIArchive/MRIWork10/pv/<user_folder>/Old.tar.gz
    
 ```
 
